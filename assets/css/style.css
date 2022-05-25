@@ -10,12 +10,12 @@
   --sat: 27%;
   --lig: 46%;
   --second-hue: 219;
-  --first-color: hsl(var(--first-hue), var(--sat), var(--lig));
+  --first-color: rgba(243,111,12,1);
   --first-color-alt: hsl(var(--first-hue), var(--sat), 55%); /* -4% */
   --title-color: hsl(var(--second-hue), 15%, 15%);
   --text-color: hsl(var(--second-hue), 4%, 55%);
   --text-color-light: hsl(var(--second-hue), 4%, 55%);
-  --body-color: hsl(var(--second-hue), 100%, 99%);
+  --body-color: rgb(240, 240, 240);
   --container-color: #fff;
 
   /*========== Font and typography ==========*/
@@ -232,12 +232,29 @@ img {
 .footer__social-link{
   display: flex;
   align-items: center;
-  background-color: var(--body-color);
-  color: var(--first-color);
+  column-gap: 0.5rem;
+  color: #fff;
   padding: .5rem;
   border-radius: .5rem;
   font-size: 1.5rem;
+  font-weight: 700;
   width: max-content;
+}
+
+.footer__social-link.youtube{
+  background-color: #c4302b;
+}
+
+.footer__social-link.discord{
+  background-color: #738ADB;
+}
+
+.footer__social-link.paypal{
+  background-color: #1e477a;
+}
+
+.footer__social-link.github{
+  background-color: #171515;
 }
 
 .footer__social-link p {
@@ -249,5 +266,15 @@ img {
   margin-top: 4.5rem;
   color: var(--container-color);
   text-align: center;
+  font-weight: 500;
   font-size: var(--small-font-size);
+}
+
+.footer__copy a{
+  text-decoration: underline;
+  color: #fff;
+}
+
+.footer__copy a:hover{
+  text-decoration: none;
 }
