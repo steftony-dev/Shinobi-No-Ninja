@@ -117,13 +117,24 @@ img {
   color: var(--text-color);
 }
 
+/*=============== BUTTONS ===============*/
+.button{
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--body-color);
+  padding: .75rem;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+  transition: .4s;
+}
+
 /*=============== HEADER & NAV===============*/
 .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(rgba(255,162,9,1) 0%, rgb(212, 123, 54) 100%);
+  background: transparent;
   z-index: var(--z-fixed);
   transition: .4s; /* for light mode animation */
 }
@@ -169,6 +180,68 @@ img {
 /* Change background header */
 .scroll-header{
   box-shadow: 0 4px 4px hsla(0, 0%, 4%, .3);
+  background: linear-gradient(rgba(255,162,9,1) 0%, rgb(212, 123, 54) 100%);
+}
+
+/*=============== HERO ===============*/
+@import url('https://rsms.me/inter/inter.css');
+
+#hero{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.hero__container{
+  margin: 0;
+  height: 100vh;
+  min-height: 400px;
+  width: 100%;
+  overflow: hidden;
+  background: white url('https://raw.githubusercontent.com/steftony-dev/ShinobiCraft/main/assets/img/naruto.png') no-repeat center center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  /* The two lines below make the photo opaque. No Apacity = 1  Full Opacity = 0  :-) */
+  opacity: 1;
+  line-height: 2.8em;
+  /* FLEX */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__container h1,
+.hero__container p,
+.hero__container img{
+  margin-top: 1em;
+  Text-align: center;
+  width: 100%;
+}
+
+.hero__container img{
+  width: 50%;
+}
+
+.hero__container .button{
+  font-size: var(--h2-font-size);
+  font-weight: bolder;
+  background: white url('https://raw.githubusercontent.com/steftony-dev/ShinobiCraft/main/assets/img/minecraftDirtBanner.png') no-repeat;
+  background-size: 100% auto;
+  background-position: top left;
+  transition: .6s;
+  cursor: pointer;
+}
+
+.hero__container .button:hover{
+  background-position: bottom left;
+}
+
+.hero__container p{
+  font-weight: bolder;
+  font-size: var(--h2-font-size);
 }
 
 /*=============== FOOTER ===============*/
