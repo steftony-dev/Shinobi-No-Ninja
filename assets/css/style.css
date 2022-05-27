@@ -461,6 +461,9 @@ img {
     word-spacing: auto;
   }
 
+  .hero__container{
+    background: white url('https://raw.githubusercontent.com/steftony-dev/ShinobiCraft/main/assets/img/naruto-mobile.png') no-repeat center center;
+  }
   .hero__container span{
     display: none;
   }
