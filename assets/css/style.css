@@ -63,6 +63,16 @@
   font-family: "Minercraftory";
 }
 
+/*=============== ANIMATION ===============*/
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;} 
+} 
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;} 
+} 
+
 /*=============== BASE ===============*/
 * {
   box-sizing: border-box;
@@ -159,6 +169,7 @@ img {
 
   height: auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -172,6 +183,11 @@ img {
   background: transparent;
   z-index: var(--z-fixed);
   transition: .4s; /* for light mode animation */
+}
+
+#PermHeader{
+  box-shadow: 0 4px 4px hsla(0, 0%, 4%, .3);
+  background: linear-gradient(rgba(255,162,9,1) 0%, rgb(212, 123, 54) 100%);
 }
 
 .nav{
@@ -219,7 +235,6 @@ img {
 }
 
 /*=============== HERO ===============*/
-@import url('https://rsms.me/inter/inter.css');
 
 #hero{
   padding: 0;
@@ -270,27 +285,34 @@ img {
   cursor: pointer;
   width: 600px;
   height: 100px;
+  transition-duration: 5s;
 }
 
 
 .hero__container .button #img1{
   height: 5rem;
+  transition-duration: 2.5s;
 }
 
 .hero__container .button #img2{
-  display: none;
+  transition-duration: 2.5s;
 }
 
 .hero__container .button:hover{
   background-position: bottom left;
+  transition-duration: 5s;
 }
 
 .hero__container .button:hover #img1{
-  display: none;
+  transform: translateY(-40px);
+  transition-duration: 2.5s;
 }
 
 .hero__container .button:hover #img2{
-  display: block;
+  transform: translateY(-40px);
+  animation-name: fadeIn;
+  animation-delay: 10s;
+  transition-duration: 2.5s;
 }
 
 /*=============== FOOTER ===============*/
