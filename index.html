@@ -151,6 +151,8 @@
                             </div>
                         </div>
                     </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
                     <div class="swiper-pagination"></div>
                 </div>
             </section>
@@ -213,13 +215,29 @@
 
         <script>
             let swiperSItems = new Swiper(".SItems__container", {
-                slidesPerView: 'auto',
-                spaceBetween: 30,
+                slidesPerView: 1,
+                spaceBetween: 10,
                 grabCursor: true,
-                // focusableElements: button,
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
                 pagination: {
-                    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+                    el: ".swiper-pagination",
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 40,
+                    },
+                    992: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    },
+                    1440: {
+                        slidesPerView: 4,
+                        spaceBetween: 40,
+                    },
                 },
             });
           </script>

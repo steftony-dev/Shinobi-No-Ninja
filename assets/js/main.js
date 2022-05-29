@@ -17,21 +17,3 @@ async function copyTextToClipboard(text) {
     alert('Error in copying text: ', err);
   }
 }
-
-/*=============== SWIPER JS ===============*/
-// let swiperSItems = new Swiper(".SItems__container", {
-//   spaceBetween: 30,
-//   loop: true,
-//   grabCursor: true,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-// });
-            var swiper = new Swiper(".SItems__container", {
-              spaceBetween: 30,
-              pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-              },
-            });

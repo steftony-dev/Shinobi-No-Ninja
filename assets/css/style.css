@@ -23,9 +23,10 @@
   --body-font: 'Poppins', serif;
   --biggest-font-size: 3rem;
   --h1-font-size: 1.5rem;
-  --h2-font-size: 1.75rem;
+  --h2-font-size: 3rem;
   --h3-font-size: 1.25rem;
   --h4-font-size: 1rem;
+  --normal-font-size-hover: 1.25rem;
   --normal-font-size: .938rem;
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
@@ -167,6 +168,27 @@ img {
   align-items: center;
 }
 
+/*=============== SWIPER ===============*/
+.swiper-button-next {
+  opacity: 1;
+  color: rgb(212, 123, 54);
+}
+
+.swiper-button-prev {
+  opacity: 1;
+  color: rgb(212, 123, 54);
+}
+
+.swiper-pagination-bullet{
+  background-color: black;
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active{
+  background-color: rgba(255,162,9,1);
+  opacity: 1;
+}
+
 /*=============== HEADER & NAV===============*/
 .header {
   position: fixed;
@@ -233,6 +255,7 @@ img {
   padding: 0;
   margin: 0;
   width: 100%;
+  border-bottom: 25px solid rgba(255,162,9,1);
 }
 
 .hero__container{
@@ -309,15 +332,18 @@ img {
 }
 
 /*=============== ITEMS SHOP ===============*/
+.SItems__container{
+  min-height: 550px;
+  height: auto;
+}
+
 .SItems__card{
 	background: #F3F2F6;
-	width: 400px;
-	height: 500px;
-	margin: 1% 1.5%;
+	min-height: 500px;
+  height: auto;
 	border-radius: 10px;
 	float: left;
 	position: relative;
-	box-shadow: 0px 0px 10px #f36f0c; /*rgba(243,111,12,1)*/
 	transition: .3s ease-in-out;
 }
 
@@ -388,11 +414,18 @@ img {
 .Sitems__button a{
   width: 50%;
   padding: 5px;
+  margin: 1px;
   background: linear-gradient(rgba(255,162,9,1) 0%, rgba(243,111,12,1) 100%);
   color: black;
   text-align: center;
   border-radius: 10px;
   border: solid 2px black;
+}
+
+.Sitems__button a:hover{
+  margin: 0;
+  border: solid 3px black;
+  font-weight: 900!important;
 }
 
 /*=============== FOOTER ===============*/
@@ -510,11 +543,15 @@ img {
 }
 
 /* For medium devices */
-@media screen and (max-width: 767px){
+@media screen and (max-width: 768px){
   .Fnaruto {
     font-size: 1.5rem;
     line-height: 4rem;
     letter-spacing: 0px;
+  }
+
+  .section__title{
+    font-size: var(--h2-font-size);
   }
 
   .nav__menu{
@@ -576,6 +613,18 @@ img {
   }
   .hero__container p{
     color: white;
+  }
+
+  .SItems__card{
+    border-radius: 0px;
+  }
+  .SItems__top{
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+  }
+  .SItems__bottom{
+    border-bottom-left-radius: 0px;
+	  border-bottom-right-radius: 0px;
   }
 
   .nav{
